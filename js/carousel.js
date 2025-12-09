@@ -1,95 +1,127 @@
-// Hero Image Carousel
-document.addEventListener('DOMContentLoaded', function() {
-    const carouselSlides = document.querySelectorAll('.carousel-slide');
-    const carouselIndicators = document.querySelectorAll('.carousel-indicator');
-    const carouselPrevBtn = document.querySelector('.carousel-prev');
-    const carouselNextBtn = document.querySelector('.carousel-next');
-    
-    if (carouselSlides.length === 0) return;
-    
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".carousel-slide");
+    const indicators = document.querySelectorAll(".carousel-indicator");
     let currentSlide = 0;
-    let carouselInterval;
-    
+    let slideInterval;
+    let isTransitioning = false;
+
+    // Function to show specific slide with smooth transition
     function showSlide(index) {
-        // Hide all slides
-        carouselSlides.forEach(slide => {
-            slide.classList.remove('active');
-        });
-        
-        // Remove active class from all indicators
-        carouselIndicators.forEach(indicator => {
-            indicator.classList.remove('active');
-        });
-        
-        // Show current slide and activate indicator
-        carouselSlides[index].classList.add('active');
-        if (carouselIndicators[index]) {
-            carouselIndicators[index].classList.add('active');
-        }
-        currentSlide = index;
+      if (isTransitioning || index === currentSlide) return;
+
+      isTransitioning = true;
+      const prevSlide = currentSlide;
+      currentSlide = index;
+
+      // Remove active class from all slides and indicators
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+        slide.classList.remove("exit");
+      });
+
+      indicators.forEach((indicator) => indicator.classList.remove("active"));
+
+      // Add exit animation to previous slide
+      if (slides[prevSlide]) {
+        slides[prevSlide].classList.add("exit");
+
+        // Remove exit class after animation completes
+        setTimeout(() => {
+          slides[prevSlide].classList.remove("exit");
+        }, 1200);
+      }
+
+      // Add active class to current slide and indicator
+      setTimeout(() => {
+        slides[index].classList.add("active");
+        indicators[index].classList.add("active");
+        isTransitioning = false;
+      }, 100);
     }
-    
+
+    // Function to show next slide
     function nextSlide() {
-        let nextIndex = currentSlide + 1;
-        if (nextIndex >= carouselSlides.length) {
-            nextIndex = 0;
-        }
-        showSlide(nextIndex);
+      let nextIndex = (currentSlide + 1) % slides.length;
+      showSlide(nextIndex);
     }
-    
-    function prevSlide() {
-        let prevIndex = currentSlide - 1;
-        if (prevIndex < 0) {
-            prevIndex = carouselSlides.length - 1;
-        }
-        showSlide(prevIndex);
-    }
-    
-    // Initialize carousel
-    showSlide(0);
-    
-    // Auto-advance carousel
-    function startCarousel() {
-        carouselInterval = setInterval(nextSlide, 5000);
-    }
-    
-    startCarousel();
-    
-    // Event listeners for carousel controls
-    if (carouselNextBtn) {
-        carouselNextBtn.addEventListener('click', function() {
-            clearInterval(carouselInterval);
-            nextSlide();
-            startCarousel();
-        });
-    }
-    
-    if (carouselPrevBtn) {
-        carouselPrevBtn.addEventListener('click', function() {
-            clearInterval(carouselInterval);
-            prevSlide();
-            startCarousel();
-        });
-    }
-    
+
     // Event listeners for indicators
-    carouselIndicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', function() {
-            clearInterval(carouselInterval);
-            showSlide(index);
-            startCarousel();
-        });
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener("click", () => {
+        showSlide(index);
+        resetInterval();
+      });
+
+      // Add auto-progress indicator
+      indicator.addEventListener("mouseenter", function () {
+        if (this.classList.contains("active")) {
+          this.style.setProperty("--progress", "100%");
+        }
+      });
     });
-    
-    // Pause carousel on hover
-    const heroCarousel = document.querySelector('.hero-carousel');
-    if (heroCarousel) {
-        heroCarousel.addEventListener('mouseenter', function() {
-            clearInterval(carouselInterval);
-        });
-        
-        heroCarousel.addEventListener('mouseleave', function() {
-            startCarousel();
-        });
+
+    // Auto-advance slides
+    function startInterval() {
+      slideInterval = setInterval(nextSlide, 6000); // Change slide every 6 seconds
     }
-});
+
+    function resetInterval() {
+      clearInterval(slideInterval);
+      startInterval();
+    }
+
+    // Start the carousel
+    startInterval();
+
+    // Pause on hover
+    const heroSection = document.querySelector(".hero");
+    heroSection.addEventListener("mouseenter", () => {
+      clearInterval(slideInterval);
+    });
+
+    heroSection.addEventListener("mouseleave", () => {
+      startInterval();
+    });
+
+    // Keyboard navigation
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") {
+        nextSlide();
+        resetInterval();
+      } else if (e.key === "ArrowLeft") {
+        let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(prevIndex);
+        resetInterval();
+      }
+    });
+
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    heroSection.addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    heroSection.addEventListener("touchend", (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      const diff = touchStartX - touchEndX;
+
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe left - next slide
+          nextSlide();
+        } else {
+          // Swipe right - previous slide
+          let prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+          showSlide(prevIndex);
+        }
+        resetInterval();
+      }
+    }
+  });
