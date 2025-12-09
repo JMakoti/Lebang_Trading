@@ -1,0 +1,106 @@
+/* Responsive styles */
+@media (max-width: 992px) {
+    .about-content, .service-details, .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-details:nth-child(even) .service-img,
+    .service-details:nth-child(even) .service-description {
+        order: unset;
+    }
+    
+    .hero h1 {
+        font-size: 42px;
+    }
+    
+    .hero .tagline {
+        font-size: 22px;
+    }
+    
+    .page-header h2 {
+        font-size: 36px;
+    }
+    
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: var(--shadow);
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .hero {
+        padding: 120px 0 80px;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero .tagline {
+        font-size: 20px;
+    }
+    
+    .values-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .carousel-nav {
+        display: none;
+    }
+    
+    .logo h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero .tagline {
+        font-size: 18px;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+    
+    .section-title h2 {
+        font-size: 28px;
+    }
+    
+    .page-header h2 {
+        font-size: 32px;
+    }
+    
+    .service-img {
+        height: 250px;
+    }
+}

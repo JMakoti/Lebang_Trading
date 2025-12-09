@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Honeycomb Layout</title>
+
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #111;
+  margin: 0;
+}
+
+/* HONEYCOMB CONTAINER */
+.honeycomb {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ROWS */
+.honeycomb-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* <--- spacing between hexes */
+}
+
+/* HEX BASE */
+.hex {
+  width: 100px;
+  height: 55px;
+  background: #555;
+  position: relative;
+  margin: 10px 0; /* vertical spacing */
+  border: 3px solid white;
+}
+
+/* TOP + BOTTOM TRIANGLES */
+.hex:before,
+.hex:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+}
+
+.hex:before {
+  bottom: 100%;
+  border-bottom: 27.5px solid #555;
+}
+
+.hex:after {
+  top: 100%;
+  border-top: 27.5px solid #555;
+}
+
+/* TEXT INSIDE */
+.hex-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* --- ROW OFFSETS (UPDATED FOR 10px GAP) --- */
+
+/* Row 2 shifts by half hex width + half gap = 50px + 5px */
+.honeycomb-row:nth-child(2) {
+  margin-left: 55px;
+}
+
+/* Row 3 shifts by full hex width + full gap = 100px + 10px */
+.honeycomb-row:nth-child(3) {
+  margin-left: 110px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="honeycomb">
+
+  <!-- ROW 1 (2 hexes) -->
+  <div class="honeycomb-row">
+    <div class="hex"><div class="hex-content">A</div></div>
+    <div class="hex"><div class="hex-content">B</div></div>
+  </div>
+
+  <!-- ROW 2 (3 hexes) -->
+  <div class="honeycomb-row">
+    <div class="hex"><div class="hex-content">C</div></div>
+    <div class="hex"><div class="hex-content">D</div></div>
+    <div class="hex"><div class="hex-content">E</div></div>
+  </div>
+
+  <!-- ROW 3 (1 hex) -->
+  <div class="honeycomb-row">
+    <div class="hex"><div class="hex-content">F</div></div>
+  </div>
+
+</div>
+
+</body>
+</html>
