@@ -3,280 +3,419 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Honeycomb Grid Layout In Pure CSS</title>
-
+    <title>Petroleum Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lucide/1.28.0/lucide.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-      .honeycomb {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        justify-content: center;
-        align-items: center;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 0;
-        transform: translateY(80px);
+      :root {
+        --primary: #1e40af;
+        --primary-foreground: #ffffff;
+        --accent: #dc2626;
+        --card: #ffffff;
+        --card-foreground: #1f2937;
+        --secondary: #f3f4f6;
+        --secondary-foreground: #374151;
+        --muted-foreground: #6b7280;
+        --background: #f9fafb;
+
+        --gradient-hero: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+        --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.5);
       }
 
-      .honeycomb-cell {
-        flex: 0 1 180px;
-        max-width: 180px;
-        height: 99px; /* recalculated */
-        margin: 47px 10px 20px; /* recalculated */
+    
+
+      .bg-background {
+        background-color: var(--background);
+      }
+
+      /* Hero Section */
+      .hero {
         position: relative;
-        padding: 0.5em;
-        text-align: center;
-        z-index: 1;
-        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 5rem 1.5rem;
+        background: var(--gradient-hero);
       }
 
-      .honeycomb-cell::before,
-      .honeycomb-cell::after,
-      .honeycomb-cell_image {
-        top: -50%;
-        left: 0;
-        width: 100%;
-        height: 200%;
+      .hero-bg-effects {
         position: absolute;
-        clip-path: polygon(
-          50% 0%,
-          100% 25%,
-          100% 75%,
-          50% 100%,
-          0% 75%,
-          0% 25%
-        );
-        z-index: -1;
+        inset: 0;
+        opacity: 0.1;
       }
 
-      .honeycomb_placeholder {
-        display: none;
-        opacity: 0;
-        width: 180px;
-        margin: 0 10px;
+      .hero-bg-circle-1 {
+        position: absolute;
+        top: 0;
+        left: 25%;
+        width: 24rem;
+        height: 24rem;
+        background-color: var(--primary);
+        border-radius: 50%;
+        filter: blur(3rem);
       }
 
-      /* Adjust responsive breakpoints */
-      @media (max-width: 550px) {
-        .honeycomb-cell {
-          margin: 60px 20px;
-        }
-      }
-      @media (min-width: 550px) and (max-width: 825px) {
-        .honeycomb-cell:nth-child(3n) {
-          margin-right: calc(50% - 90px);
-          margin-left: calc(50% - 90px);
-        }
-
-        .honeycomb_placeholder:nth-child(3n + 5) {
-          display: block;
-        }
+      .hero-bg-circle-2 {
+        position: absolute;
+        bottom: 0;
+        right: 25%;
+        width: 20rem;
+        height: 20rem;
+        background-color: var(--accent);
+        border-radius: 50%;
+        filter: blur(3rem);
       }
 
-      /* * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: "Poppins", sans-serif;
-        background: #111111;
-      }
-
-      .honeycomb {
-        display: -webkit-box;
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        -webkit-box-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        align-items: center;
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 0;
-        transform: translateY(80px);
-      }
-      .honeycomb-cell {
-        -webkit-box-flex: 0;
-        flex: 0 1 250px;
-        max-width: 250px;
-        height: 137.5px;
-        margin: 65.4761904762px 12.5px 25px;
+      .hero-content {
         position: relative;
-        padding: 0.5em;
+        max-width: 72rem;
+        margin: 0 auto;
         text-align: center;
-        z-index: 1;
-        box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-      }
-      .honeycomb-cell_title {
-        height: 100%;
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        justify-content: center;
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
-        word-break: break-word;
-        text-transform: uppercase;
-        color: #fff;
-        font-weight: 700;
-        font-size: 1.75em;
-        -webkit-transition: opacity 350ms;
-        transition: opacity 350ms;
-      }
-      .honeycomb-cell_title > small {
-        font-weight: 300;
-        margin-top: 0.25em;
-      }
-      .honeycomb-cell_image {
-        object-fit: cover;
-        object-position: center;
-        filter: grayscale(100%);
       }
 
-      .honeycomb-cell::before,
-      .honeycomb-cell::after {
-        content: "";
+      .hero-title {
+        font-family: "Arial Black", "Segoe UI", sans-serif;
+        font-size: 3rem;
+        letter-spacing: 0.1em;
+        color: var(--primary-foreground);
+        margin-bottom: 1rem;
       }
-      .honeycomb-cell::before,
-      .honeycomb-cell::after,
-      .honeycomb-cell_image {
-        top: -50%;
-        left: 0;
-        width: 100%;
-        height: 200%;
-        display: block;
+
+      @media (min-width: 768px) {
+        .hero-title {
+          font-size: 5rem;
+        }
+      }
+
+      .hero-subtitle {
+        font-size: 1.125rem;
+        color: rgba(255, 255, 255, 0.7);
+        max-width: 42rem;
+        margin: 0 auto;
+      }
+
+      @media (min-width: 768px) {
+        .hero-subtitle {
+          font-size: 1.25rem;
+        }
+      }
+
+      /* Products Grid */
+      .products-container {
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 4rem 1.5rem;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      @media (min-width: 768px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .product-card {
+        position: relative;
+        background-color: var(--card);
+        border-radius: 0.75rem;
+        padding: 2rem;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        box-shadow: var(--shadow-card);
+        animation: fadeInUp 0.6s ease forwards;
+        opacity: 0;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .product-card:hover {
+        transform: translateY(-0.5rem);
+      }
+
+      .product-card:hover .product-icon {
+        background-color: var(--primary);
+      }
+
+      .product-card:hover .product-title {
+        color: var(--primary);
+      }
+
+      .product-glow {
         position: absolute;
-        -webkit-clip-path: polygon(
-          50% 0%,
-          100% 25%,
-          100% 75%,
-          50% 100%,
-          0% 75%,
-          0% 25%
+        inset: 0;
+        border-radius: 0.75rem;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        box-shadow: var(--shadow-glow);
+      }
+
+      .product-card:hover .product-glow {
+        opacity: 1;
+      }
+
+
+      .product-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: var(--secondary-foreground);
+      }
+
+      .product-title {
+        font-family: "Arial Black", "Segoe UI", sans-serif;
+        font-size: 1.5rem;
+        letter-spacing: 0.05em;
+        color: var(--card-foreground);
+        margin-bottom: 0.75rem;
+        transition: color 0.3s ease;
+      }
+
+      @media (min-width: 768px) {
+        .product-title {
+          font-size: 1.875rem;
+        }
+      }
+
+      .product-description {
+        color: var(--muted-foreground);
+        font-size: 0.875rem;
+        line-height: 1.75;
+      }
+
+      .product-line {
+        position: absolute;
+        bottom: 0;
+        left: 2rem;
+        right: 2rem;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          var(--primary),
+          transparent
         );
-        clip-path: polygon(
-          50% 0%,
-          100% 25%,
-          100% 75%,
-          50% 100%,
-          0% 75%,
-          0% 25%
-        );
-        z-index: -1;
-      }
-      .honeycomb-cell::before {
-        background: #fff;
-        -webkit-transform: scale(1.055);
-        transform: scale(1.055);
-      }
-      .honeycomb-cell::after {
-        background: #111111;
-        opacity: 0.7;
-        -webkit-transition: opacity 350ms;
-        transition: opacity 350ms;
-      }
-      .honeycomb-cell:hover .honeycomb-cell_title {
         opacity: 0;
-      }
-      .honeycomb-cell:hover .honeycomb-cell_image {
-        filter: grayscale(0%);
-      }
-      .honeycomb-cell:hover::before {
-        background: #fc5130;
-      }
-      .honeycomb-cell:hover::after {
-        opacity: 0;
-      }
-      .honeycomb_placeholder {
-        display: none;
-        opacity: 0;
-        width: 250px;
-        margin: 0 12.5px;
+        transition: opacity 0.5s ease;
       }
 
-      @media (max-width: 550px) {
-        .honeycomb-cell {
-          margin: 81.25px 25px;
+      .product-card:hover .product-line {
+        opacity: 1;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: var(--secondary);
+        padding: 2rem 1.5rem;
+      }
+
+      .footer-content {
+        max-width: 72rem;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .footer-text {
+        color: rgba(55, 65, 81, 0.6);
+        font-size: 0.875rem;
+      }
+
+      /* Custom icons styling */
+      .icon {
+        width: 2rem;
+        height: 2rem;
+        stroke-width: 1.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 640px) {
+        .hero-title {
+          font-size: 2.25rem;
+        }
+
+        .hero {
+          padding: 3rem 1rem;
+        }
+
+        .products-container {
+          padding: 3rem 1rem;
+        }
+
+        .product-card {
+          padding: 1.5rem;
         }
       }
-      @media (min-width: 550px) and (max-width: 825px) {
-        .honeycomb-cell:nth-child(3n) {
-          margin-right: calc(50% - 125px);
-          margin-left: calc(50% - 125px);
-        }
-
-        .honeycomb_placeholder:nth-child(3n + 5) {
-          display: block;
-        }
-      }
-      @media (min-width: 825px) and (max-width: 1100px) {
-        .honeycomb-cell:nth-child(5n + 4) {
-          margin-left: calc(50% - 275px);
-        }
-
-        .honeycomb-cell:nth-child(5n + 5) {
-          margin-right: calc(50% - 275px);
-        }
-
-        .honeycomb_placeholder:nth-child(5n),
-        .honeycomb_placeholder:nth-child(5n + 3) {
-          display: block;
-        }
-      }
-      @media (min-width: 1100px) {
-        .honeycomb-cell:nth-child(7n + 5) {
-          margin-left: calc(50% - 400px);
-        }
-
-        .honeycomb-cell:nth-child(7n + 7),
-        .honeycomb-cell:nth-child(7n + 5):nth-last-child(2) {
-          margin-right: calc(50% - 400px);
-        }
-
-        .honeycomb_placeholder:nth-child(7n + 7),
-        .honeycomb_placeholder:nth-child(7n + 9),
-        .honeycomb_placeholder:nth-child(7n + 11) {
-          display: block;
-        }
-      } */
     </style>
   </head>
   <body>
-    <div>
-      <ul class="honeycomb">
-        <li class="honeycomb-cell">
-          <img class="honeycomb-cell_image" src="img/work-1.jpg" />
-          <div class="honeycomb-cell_title">Web Design</div>
-        </li>
-        <li class="honeycomb-cell">
-          <img class="honeycomb-cell_image" src="img/work-2.jpg" />
-          <div class="honeycomb-cell_title">Graphic Design</div>
-        </li>
-        <li class="honeycomb-cell">
-          <img class="honeycomb-cell_image" src="img/Work3.jpg" />
-          <div class="honeycomb-cell_title">Illustration</div>
-        </li>
-        <li class="honeycomb-cell honeycomb_placeholder"></li>
-      </ul>
+    <div class="min-h-screen bg-background">
+      <!-- Hero Section -->
+      <header class="hero">
+        <div class="hero-bg-effects">
+          <div class="hero-bg-circle-1"></div>
+          <div class="hero-bg-circle-2"></div>
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">PETROLEUM PRODUCTS</h1>
+          <p class="hero-subtitle">
+            Premium quality fuels, lubricants, and industrial petroleum
+            solutions
+          </p>
+        </div>
+      </header>
 
-      <ul class="honeycomb">
-        <li class="honeycomb-cell">
-          <img class="honeycomb-cell_image" src="img/work-1.jpg" />
-          <div class="honeycomb-cell_title">Web Design</div>
-        </li>
-        <li class="honeycomb-cell">
-          <img class="honeycomb-cell_image" src="img/work-2.jpg" />
-          <div class="honeycomb-cell_title">Graphic Design</div>
-        </li>
-        <li class="honeycomb-cell honeycomb_placeholder"></li>
-      </ul>
+      <!-- Products Grid -->
+      <main class="products-container">
+        <div class="products-grid" id="productsGrid">
+          <!-- Products will be dynamically inserted here -->
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <p class="footer-text">
+            Premium Petroleum Products — Quality You Can Trust
+          </p>
+        </div>
+      </footer>
     </div>
+
+    <script>
+      // Products data
+      const products = [
+        {
+          name: "Petrol",
+          icon: "fas fa-gas-pump",
+          description:
+            "High-quality automotive gasoline for optimal engine performance",
+        },
+        {
+          name: "Diesel",
+          icon: "fas fa-truck-moving",
+          description:
+            "Premium diesel fuel for commercial and industrial vehicles",
+        },
+        {
+          name: "Paraffin",
+          icon: "fas fa-fire",
+          description: "Refined kerosene for heating and lighting applications",
+        },
+        {
+          name: "Liquefied Petroleum Gas",
+          icon: "fas fa-wind",
+          description: "Clean-burning LPG for domestic and industrial use",
+        },
+        {
+          name: "Bitumen",
+          icon: "fas fa-road",
+          description:
+            "Industrial-grade bitumen for road construction and roofing",
+        },
+        {
+          name: "Jet Fuel",
+          icon: "fas fa-plane",
+          description:
+            "Aviation-grade fuel meeting international safety standards",
+        },
+        {
+          name: "Light Duty Lubricants",
+          icon: "fas fa-oil-can",
+          description:
+            "Precision lubricants for passenger vehicles and light machinery",
+        },
+        {
+          name: "Heavy Duty Lubricants",
+          icon: "cog-icon",
+          description:
+            "Industrial lubricants for heavy machinery and equipment",
+        },
+        {
+          name: "Heavy Duty Grease",
+          icon: "fas fa-droplet",
+          description:
+            "High-performance grease for demanding industrial applications",
+        },
+      ];
+
+      // Function to create product card
+      function createProductCard(product, index) {
+        return `
+                <article class="product-card" style="animation-delay: ${
+                  index * 100
+                }ms">
+                    <!-- Glow effect on hover -->
+                    <div class="product-glow"></div>
+                    
+                    <!-- Icon -->
+                        <div class="product-icon">
+                            <i class="${product.icon}"></i>
+                        </div>
+
+                    <!-- Content -->
+                    <h2 class="product-title">${product.name.toUpperCase()}</h2>
+                    <p class="product-description">${product.description}</p>
+
+                    <!-- Decorative line -->
+                    <div class="product-line"></div>
+                </article>
+            `;
+      }
+
+      // Function to initialize the page
+      function initializePage() {
+        const productsGrid = document.getElementById("productsGrid");
+
+        // Clear existing content
+        productsGrid.innerHTML = "";
+
+        // Add product cards
+        products.forEach((product, index) => {
+          productsGrid.innerHTML += createProductCard(product, index);
+        });
+
+        // Add hover effect to product cards
+        const productCards = document.querySelectorAll(".product-card");
+        productCards.forEach((card) => {
+          card.addEventListener("mouseenter", function () {
+            this.style.boxShadow = "var(--shadow-glow)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            this.style.boxShadow = "var(--shadow-card)";
+          });
+        });
+      }
+
+      // Initialize page when DOM is loaded
+      document.addEventListener("DOMContentLoaded", initializePage);
+    </script>
   </body>
 </html>
