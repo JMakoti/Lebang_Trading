@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lebang Trading - Your Number One Solution</title>
+    
+    <!-- Fonts & Icons -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -12,20 +15,18 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+
+     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
     <!-- Header & Navigation -->
     <header>
       <div class="container header-container">
         <div class="logo">
-          <!-- <div> -->
-            <img src="images/logo02.png" alt="LEBANG TRADING">
-            <!-- <h1 class="humanist-font">LEBANG <span>TRADING</span></h1>
-            <div class="tagline">YOUR NUMBER ONE SOLUTION</div> -->
-          <!-- </div> -->
-          <!-- <div class="est">EST 2004</div> -->
+            <img src="images/logo02.png" loading="lazy" alt="LEBANG TRADING">   
         </div>
 
         <nav>
@@ -55,29 +56,20 @@
 
     <!-- Home Page Content -->
     <main class="page-content">
-      <!-- Hero Section with Carousel -->
+      <!-- Hero Section with Carousel -->   
       <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-carousel">
           <!-- Slide 1 -->
           <div
-            class="carousel-slide active"
-            style="
-              background: linear-gradient(
-                  rgba(33, 64, 154, 0.6),
-                  rgba(33, 64, 154, 0.6)
-                ),
-                url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-              background-repeat: no-repeat;
-              background-size: cover;
-            "
+            class="carousel-slide active slide-1"
           >
             <div class="hero-content">
               <h1 class="humanist-font">LEBANG TRADING</h1>
               <div class="tagline">YOUR NUMBER ONE SOLUTION</div>
               <p>
                 With over 15 years of excellence in petroleum , cleaning and
-                hygienc ,construction and civil engineering, we deliver
+                hygiene ,construction and civil engineering, we deliver
                 innovative solutions that stand the test of time.
               </p>
               <div class="hero-buttons">
@@ -85,7 +77,6 @@
                 <a
                   href="contact.html"
                   class="btn btn-outline"
-                  style="margin-left: 15px"
                   >Get Started</a
                 >
               </div>
@@ -94,16 +85,7 @@
 
           <!-- Slide 2 -->
           <div
-            class="carousel-slide"
-            style="
-              background: linear-gradient(
-                  rgba(33, 64, 154, 0.6),
-                  rgba(33, 64, 154, 0.6)
-                ),
-                url('https://images.unsplash.com/photo-1629241290025-6bb716261f5f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-              background-repeat: no-repeat;
-              background-size: cover;
-            "
+            class="carousel-slide slide-2"
           >
             <div class="container hero-content">
               <h1 class="humanist-font">PETROLEUM DIVISION</h1>
@@ -119,7 +101,6 @@
                 <a
                   href="contact.html"
                   class="btn btn-outline"
-                  style="margin-left: 15px"
                   >Consult Our Experts</a
                 >
               </div>
@@ -128,16 +109,7 @@
 
           <!-- Slide 3 -->
           <div
-            class="carousel-slide"
-            style="
-              background: linear-gradient(
-                  rgba(33, 64, 154, 0.6),
-                  rgba(33, 64, 154, 0.6)
-                ),
-                url('https://images.unsplash.com/photo-1575281923032-f40d94ef6160?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-              background-repeat: no-repeat;
-              background-size: cover;
-            "
+            class="carousel-slide slide-3"
           >
             <div class="container hero-content">
               <h1 class="humanist-font">CONSTRUCTION DIVISION</h1>
@@ -153,7 +125,6 @@
                 <a
                   href="contact.html"
                   class="btn btn-outline"
-                  style="margin-left: 15px"
                   >Discuss Your Project</a
                 >
               </div>
@@ -162,16 +133,7 @@
 
           <!-- Slide 4 -->
           <div
-            class="carousel-slide"
-            style="
-              background: linear-gradient(
-                  rgba(33, 64, 154, 0.6),
-                  rgba(33, 64, 154, 0.6)
-                ),
-                url('https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-              background-repeat: no-repeat;
-              background-size: cover;
-            "
+            class="carousel-slide slide-4"
           >
             <div class="container hero-content">
               <h1 class="humanist-font">CLEANING AND HYGIENE DIVISION</h1>
@@ -185,7 +147,6 @@
                 <a
                   href="contact.html"
                   class="btn btn-outline"
-                  style="margin-left: 15px"
                   >Contact Our Team</a
                 >
               </div>
@@ -241,20 +202,24 @@
                 <li class="corecombs-cell">
                   <img
                     class="corecombs-cell_image"
+                    loading="lazy"
                     src="https://miro.medium.com/v2/resize:fit:1200/1*lbUoIWMMwbGY-S0EOBJ1Wg.jpeg"
                   />
                   <div class="corecombs-cell_title">Integrity</div>
                 </li>
                 <li class="corecombs-cell">
-                  <img class="corecombs-cell_image" src="images/icons/accurancy.png" />
-                  <div class="corecombs-cell_title">Accurancy</div>
+                  <img class="corecombs-cell_image" 
+                  loading="lazy"
+                  src="images/icons/accurancy.png" />
+                  <div class="corecombs-cell_title">Accuracy</div>
                 </li>
                 <!---->
                 <li class="corecombs-cell corecombs_placeholder"></li>
               </ul>
               <ul>
                  <li class="corecombs-cell">
-                  <img class="corecombs-cell_image" src="images/icons/honesty.png" />
+                  <img class="corecombs-cell_image"
+                  loading="lazy" src="images/icons/honesty.png" />
                   <div class="corecombs-cell_title">Honesty</div>
                 </li> 
                <li class="corecombs-cell corecombs_placeholder"></li>
@@ -262,7 +227,8 @@
 
               <ul class="corecombs">
                 <li class="corecombs-cell">
-                  <img class="corecombs-cell_image" src="images/icons/enthusiam.png" />
+                  <img class="corecombs-cell_image"
+                  loading="lazy" src="images/icons/enthusiam.png" />
                   <div class="corecombs-cell_title">Enthusiasm</div>
                 </li>
                 <li class="corecombs-cell">
@@ -272,7 +238,8 @@
               </ul>
               <ul class="corecombs">
                 <li class="corecombs-cell">
-                  <img class="corecombs-cell_image" src="images/icons/idea.png" />
+                  <img class="corecombs-cell_image" 
+                  loading="lazy" src="images/icons/idea.png" />
                   <div class="corecombs-cell_title">Innovation</div>
                 </li>
                 <li class="corecombs-cell corecombs_placeholder"></li>
@@ -287,7 +254,8 @@
                 country.
               </p>
 
-              <h3 style="margin-top: 30px">Our Mission</h3>
+              <h3 class="mission">Our Mission</h3>
+              
               <p>
                 To achieve our vision, we are committed to safe, quality
                 services that provide state of the art engineering construction
@@ -315,10 +283,11 @@
                 <img
                   src="https://www.scimed.co.uk/wp-content/uploads/2024/05/essential-oil_0000_Petrol.jpg"
                   alt="Petroleum Services"
+                  loading="lazy"
                 />
               </div>
               <div class="img-icon">
-                <img src="images/Services-09.png" alt="Petroleum Services" />
+                <img src="images/Services-09.png" loading="lazy" alt="Petroleum Services" />
               </div>
               <div class="service-content">
                 <h3>Petroleum Services</h3>
@@ -329,7 +298,6 @@
                 <a
                   href="petroleum.html"
                   class="btn"
-                  style="margin-top: 15px; padding: 10px 25px"
                   >Learn More</a
                 >
               </div>
@@ -337,11 +305,12 @@
 
             <div class="service-card">
               <div class="service-img">
-                <img src="images/building.jpg" alt="Building & Construction" />
+                <img src="images/building.jpg" loading="lazy" alt="Building & Construction" />
               </div>
               <div class="img-icon">
                 <img
                   src="images/Services-03.png"
+                  loading="lazy"
                   alt="Building & Construction"
                 />
               </div>
@@ -354,7 +323,6 @@
                 <a
                   href="construction.html"
                   class="btn"
-                  style="margin-top: 15px; padding: 10px 25px"
                   >Learn More</a
                 >
               </div>
@@ -362,10 +330,10 @@
 
             <div class="service-card">
               <div class="service-img">
-                <img src="images/cleaning.jpg" alt="Cleaning & Hygiene" />
+                <img src="images/cleaning.jpg"  loading="lazy" alt="Cleaning & Hygiene" />
               </div>
               <div class="img-icon">
-                <img src="images/Services-04.png" alt="Cleaning & Hygiene" />
+                <img src="images/Services-04.png"  loading="lazy" alt="Cleaning & Hygiene" />
               </div>
               <div class="service-content">
                 <h3>Cleaning & Hygiene</h3>
@@ -376,7 +344,6 @@
                 <a
                   href="cleaning.html"
                   class="btn"
-                  style="margin-top: 15px; padding: 10px 25px"
                   >Learn More</a
                 >
               </div>
@@ -561,24 +528,28 @@
               <img
                 src="https://img.freepik.com/premium-vector/simple-construction-company-logo-design_278222-8246.jpg?semt=ais_hybrid&w=740&q=80"
                 alt="CSD Supplier"
+                loading="lazy"
               />
             </div>
             <div class="partner-logo">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVUCLOcWSjvXXo2NGhU1VtOmnSOrMTpdemsQ&s"
                 alt="Construction Partner"
+                loading="lazy"
               />
             </div>
             <div class="partner-logo">
               <img
                 src="https://graphicsfamily.com/wp-content/uploads/2020/08/Construction-Logo-Design-Free-psd-1180x787.jpg"
                 alt="Engineering Association"
+                loading="lazy"
               />
             </div>
             <div class="partner-logo">
               <img
                 src="https://www.shutterstock.com/image-vector/pressure-power-wash-spray-logo-600nw-2482169923.jpg"
                 alt="Safety Organization"
+                loading="lazy"
               />
             </div>
 
@@ -586,18 +557,15 @@
               <img
                 src="https://www.shutterstock.com/image-vector/shell-icon-company-industry-oil-600w-2286690407.jpg"
                 alt="Safety Organization"
+                loading="lazy"
               />
             </div>
           </div>
         </section>
 
         <!-- Call to Action -->
-        <section class="section">
-          <div class="cta" style="
-            background: linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
-    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-  background-size: cover;
-  background-position: center;">
+        <section class="section cta-section">
+          <div class="cta">
             <h2>Ready to Start Your Project?</h2>
             <p>
               Contact us today for a consultation and let us provide you with
@@ -614,15 +582,15 @@
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <img src="images/logo01.png" alt="LEBANG TRADING">
+            <img src="images/logo01.png" loading="lazy" alt="LEBANG TRADING">
             <!-- <h2 class="humanist-font">LEBANG TRADING</h2> -->
             <!-- <div class="tagline">YOUR NUMBER ONE SOLUTION</div> -->
             <p>
               Your number one solution for construction, petroleum, and cleaning
               services since 2004.
             </p>
-            <div style="margin-top: 20px">
-              <a href="tel:+27822201638" class="btn" style="padding: 12px 25px"
+            <div class="call">
+              <a href="tel:+27822201638" class="btn"
                 ><i class="fas fa-phone-alt"></i> Call Now</a
               >
             </div>
