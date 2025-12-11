@@ -9,6 +9,7 @@
   --primary-blue: #21409a;
   --blood-orange: #f26522;
   --light-orange: #f7941d;
+  --orange-overlay: rgba(246, 171, 59, 0.9);
   --dark-blue: #1a2f7a;
   --light-color: #f8f9fa;
   --card: #ffffff;
@@ -70,46 +71,8 @@ header.scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  /* padding: 10px 0; */
   transition: var(--transition);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo h1 {
-  color: var(--primary-blue);
-  font-size: 28px;
-  font-family: "Humanist 521 BT", "Montserrat", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-}
-
-.logo span {
-  color: var(--blood-orange);
-}
-
-.logo .est {
-  font-size: 11px;
-  color: var(--gray-color);
-  background-color: #f0f0f0;
-  padding: 3px 10px;
-  border-radius: 12px;
-  margin-left: 8px;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-}
-
-.tagline {
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  color: var(--dark-blue);
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin-top: 3px;
 }
 
 nav ul {
@@ -1054,10 +1017,6 @@ nav ul li a.active::after {
 
 /* Call to action */
 .cta {
-  background: linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
-    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
-  background-size: cover;
-  background-position: center;
   color: white;
   text-align: center;
   padding: 80px 0;
@@ -1257,7 +1216,7 @@ footer {
   gap: 40px;
   margin-bottom: 40px;
 }
-
+/* 
 .footer-logo h2 {
   color: white;
   margin-bottom: 10px;
@@ -1272,7 +1231,7 @@ footer {
   font-weight: 500;
   letter-spacing: 1px;
   margin-bottom: 20px;
-}
+} */
 
 .footer-links h3,
 .footer-services h3 {
@@ -1520,7 +1479,8 @@ footer {
   transform: scale(1.055);
 }
 .servicecomb-cell::after {
-  background: var(--dark-color);
+  background: var(--orange-overlay);
+  /* background: var(--dark-color); */
   opacity: 0.7;
   -webkit-transition: opacity 350ms;
   transition: opacity 350ms;
