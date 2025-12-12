@@ -71,7 +71,7 @@ header.scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 10px 0; */
+  padding: 10px 0;
   transition: var(--transition);
 }
 
@@ -774,7 +774,7 @@ nav ul li a.active::after {
 .background-container {
   position: relative;
   width: 100%;
-  min-height: 550px; /* Increased min-height to accommodate varied card heights */
+  min-height: 550px;
 }
 
 .background-image {
@@ -837,7 +837,7 @@ nav ul li a.active::after {
 }
 
 .stat-card:nth-child(3) {
-  height: 160px;
+  height: 190px;
 }
 
 .stat-card:nth-child(4) {
@@ -987,13 +987,6 @@ nav ul li a.active::after {
 .partner-logo {
   height: 150px;
   width: 200px;
-  /* background-color: white; */
-  /* border-radius: 8px; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* box-shadow: var(--shadow); */
-  /* padding: 15px; */
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -1230,22 +1223,6 @@ footer {
 .footer-logo .call {
   margin-top: 20px;
 }
-/* 
-.footer-logo h2 {
-  color: white;
-  margin-bottom: 10px;
-  font-family: "Humanist 521 BT", "Montserrat", sans-serif;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-.footer-logo .tagline {
-  color: var(--light-orange);
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-} */
 
 .footer-links h3,
 .footer-services h3 {
@@ -1535,18 +1512,3 @@ footer {
   object-fit: cover;
 }
 
-.spilled-2 {
-  position: absolute;
-  right: 25px;
-  transform: translateY(-35%);
-  width: 800px;
-  height: 600px;
-  z-index: -10;
-  filter: grayscale(100%);
-}
-
-.spilled-2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
