@@ -578,19 +578,19 @@
     max-width: 95%;
     padding: 0 15px;
   }
-  
+
   .service-details {
     gap: 30px;
   }
-  
+
   .service-img {
     height: 450px;
   }
-  
+
   .products-grid {
     justify-content: center;
   }
-  
+
   .product-card {
     width: 320px;
   }
@@ -603,30 +603,30 @@
     padding: 80px 0;
     min-height: 300px;
   }
-  
+
   .page-header h2 {
     font-size: 32px;
   }
-  
+
   .page-header p {
     font-size: 18px;
     max-width: 90%;
   }
-  
+
   /* Service Details */
   .service-details {
     flex-direction: column;
     gap: 40px;
   }
-  
+
   .service-description {
     padding: 0;
   }
-  
+
   .service-description h3 {
     font-size: 28px;
   }
-  
+
   /* Spilled Image */
   .spilled {
     position: relative;
@@ -638,61 +638,61 @@
     z-index: 1;
     margin-bottom: -120px;
   }
-  
+
   .spilled img {
     object-fit: contain;
   }
-  
+
   /* Products Grid */
   .products-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
-  
+
   .product-card {
     width: 100%;
     animation: none;
     opacity: 1;
     transform: none;
   }
-  
+
   /* Service Offered Hexagons */
   .servicecomb {
     transform: translateY(0);
     justify-content: center;
     margin: 40px 0;
   }
-  
+
   .servicecomb-cell {
     flex: 0 1 200px;
     max-width: 200px;
     height: 110px;
     margin: 50px 10px 20px;
   }
-  
+
   .servicecomb-cell_title {
     font-size: 1.2em;
   }
-  
+
   .servicecomb-cell_title > small {
     font-size: 0.9em;
   }
-  
+
   /* Hide placeholder hexagons on tablet */
   .servicecomb_placeholder {
     display: none !important;
   }
-  
+
   /* CTA Section */
   .cta-petroleum .cta {
     padding: 60px 20px;
   }
-  
+
   .cta h2 {
     font-size: 28px;
   }
-  
+
   .cta p {
     font-size: 16px;
   }
@@ -704,15 +704,15 @@
   .page-header.hero-petroleum {
     padding: 60px 0;
   }
-  
+
   .page-header h2 {
     font-size: 28px;
   }
-  
+
   .page-header p {
     font-size: 16px;
   }
-  
+
   /* Service Details */
   .service-details {
     display: flex;
@@ -720,15 +720,15 @@
     margin-bottom: 40px;
     padding: 20px;
   }
-  
+
   .service-img {
     height: 350px;
   }
-  
+
   .service-description h3 {
     font-size: 24px;
   }
-  
+
   .service-description p {
     font-size: 15px;
   }
@@ -738,24 +738,24 @@
     grid-template-columns: 1fr;
     gap: 25px;
   }
-  
+
   .product-card {
     padding: 25px;
   }
-  
+
   .product-card h2 {
     font-size: 18px;
   }
-  
+
   .product-icon {
     font-size: 1.8rem;
   }
-  
+
   /* Service Offered */
   .service-offered {
     margin-bottom: 80px;
   }
-  
+
   .servicecomb {
     max-width: 100%;
     overflow-x: auto;
@@ -766,21 +766,21 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .servicecomb::-webkit-scrollbar {
     height: 6px;
   }
-  
+
   .servicecomb::-webkit-scrollbar-track {
     background: #f1f1f1;
     border-radius: 3px;
   }
-  
+
   .servicecomb::-webkit-scrollbar-thumb {
     background: var(--light-orange);
     border-radius: 3px;
   }
-  
+
   .servicecomb-cell {
     flex: 0 0 180px;
     max-width: 180px;
@@ -788,30 +788,30 @@
     margin: 30px 15px 20px;
     scroll-snap-align: center;
   }
-  
+
   .servicecomb-cell_title {
     font-size: 1em;
   }
-  
+
   /* Hide scrollbar for mobile */
   .servicecomb {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-  
+
   .servicecomb::-webkit-scrollbar {
     display: none;
   }
-  
+
   /* CTA Section */
   .cta-petroleum .cta {
     padding: 50px 15px;
   }
-  
+
   .cta h2 {
     font-size: 24px;
   }
-  
+
   .cta p {
     font-size: 15px;
   }
@@ -824,81 +824,81 @@
     padding: 50px 0;
     min-height: 250px;
   }
-  
+
   .page-header h2 {
     font-size: 24px;
   }
-  
+
   /* Service Details */
   .service-img {
     height: 280px;
   }
-  
+
   .service-description h3 {
     font-size: 22px;
   }
-  
+
   .service-description p {
     font-size: 14px;
     line-height: 1.6;
   }
-  
+
   /* Spilled Image */
   .spilled {
     display: none;
   }
-  
+
   /* Products Grid */
   .product-card {
     padding: 20px;
   }
-  
+
   .product-card h2 {
     font-size: 16px;
   }
-  
+
   .product-card p {
     font-size: 13px;
   }
-  
+
   .product-icon {
     font-size: 1.5rem;
   }
-  
+
   /* Service Offered Hexagons */
   .servicecomb {
     padding: 10px 5px 30px;
   }
-  
+
   .servicecomb-cell {
     flex: 0 0 150px;
     max-width: 150px;
     height: 85px;
     margin: 25px 10px 15px;
   }
-  
+
   .servicecomb-cell_title {
     font-size: 0.9em;
   }
-  
+
   .servicecomb-cell_title > small {
     font-size: 0.8em;
   }
-  
+
   /* CTA Section */
   .cta-petroleum .cta {
     padding: 40px 10px;
   }
-  
+
   .cta h2 {
     font-size: 22px;
   }
-  
+
   .cta p {
     font-size: 14px;
     margin-bottom: 25px;
   }
-  
+
   .cta .btn {
     padding: 12px 25px;
     font-size: 14px;
@@ -911,15 +911,15 @@
     min-height: 350px;
     padding: 100px 0;
   }
-  
+
   .service-details {
     flex-direction: row;
   }
-  
+
   .service-img {
     height: 400px;
   }
-  
+
   .products-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -932,15 +932,15 @@
     max-width: 130px;
     height: 75px;
   }
-  
+
   .servicecomb-cell_title {
     font-size: 0.8em;
   }
-  
+
   .product-card {
     padding: 15px;
   }
-  
+
   .product-card h2 {
     font-size: 15px;
   }
@@ -951,31 +951,31 @@
   .product-card:hover {
     transform: none;
   }
-  
+
   .product-card:active {
     transform: scale(0.98);
   }
-  
+
   .servicecomb-cell:hover .servicecomb-cell_title {
     opacity: 1;
   }
-  
+
   .servicecomb-cell:hover .servicecomb-cell_image {
     filter: grayscale(100%);
   }
-  
+
   .servicecomb-cell:hover::after {
     opacity: 0.7;
   }
-  
+
   .servicecomb-cell:active .servicecomb-cell_title {
     opacity: 0;
   }
-  
+
   .servicecomb-cell:active .servicecomb-cell_image {
     filter: grayscale(0%);
   }
-  
+
   .servicecomb-cell:active::after {
     opacity: 0;
   }
@@ -987,7 +987,7 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   .servicecomb-cell {
     flex: 0 1 220px;
     max-width: 220px;
@@ -1005,30 +1005,30 @@
   footer {
     display: none !important;
   }
-  
+
   .page-content {
     padding-top: 0;
   }
-  
+
   .servicecomb-cell::before {
     background: #f0f0f0 !important;
   }
-  
+
   .servicecomb-cell_title {
     color: #333 !important;
     opacity: 1 !important;
   }
-  
+
   .product-card {
     border: 1px solid #ddd;
     box-shadow: none !important;
     break-inside: avoid;
   }
-  
+
   .products-grid {
     display: block;
   }
-  
+
   .product-card {
     margin-bottom: 20px;
     page-break-inside: avoid;
@@ -1040,19 +1040,19 @@
   .servicecomb {
     scroll-behavior: smooth;
   }
-  
+
   /* Add navigation dots for hexagon grid */
   .servicecomb-container {
     position: relative;
   }
-  
+
   .hexagon-scroll-indicator {
     display: flex;
     justify-content: center;
     gap: 8px;
     margin-top: 20px;
   }
-  
+
   .hexagon-dot {
     width: 10px;
     height: 10px;
@@ -1061,7 +1061,7 @@
     cursor: pointer;
     transition: background 0.3s ease;
   }
-  
+
   .hexagon-dot.active {
     background: var(--light-orange);
   }
@@ -1073,7 +1073,7 @@
     animation: fadeInUp 0.6s ease forwards;
     opacity: 0;
   }
-  
+
   @keyframes fadeInUp {
     from {
       opacity: 0;
@@ -1084,15 +1084,68 @@
       transform: translateY(0);
     }
   }
-  
+
   /* Stagger animation for product cards */
-  .products-grid .product-card:nth-child(1) { animation-delay: 0.1s; }
-  .products-grid .product-card:nth-child(2) { animation-delay: 0.2s; }
-  .products-grid .product-card:nth-child(3) { animation-delay: 0.3s; }
-  .products-grid .product-card:nth-child(4) { animation-delay: 0.4s; }
-  .products-grid .product-card:nth-child(5) { animation-delay: 0.5s; }
-  .products-grid .product-card:nth-child(6) { animation-delay: 0.6s; }
-  .products-grid .product-card:nth-child(7) { animation-delay: 0.7s; }
-  .products-grid .product-card:nth-child(8) { animation-delay: 0.8s; }
-  .products-grid .product-card:nth-child(9) { animation-delay: 0.9s; }
+  .products-grid .product-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .products-grid .product-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .products-grid .product-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .products-grid .product-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .products-grid .product-card:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .products-grid .product-card:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  .products-grid .product-card:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  .products-grid .product-card:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  .products-grid .product-card:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+}
+
+/* ============================================
+   CONSTRUCTION DIVISION
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Page Header */
+  .page-header.hero-construction {
+    padding: 60px 0;
+  }
+
+  .page-header.hero-construction h2 {
+    font-size: 28px;
+  }
+
+  .page-header.hero-construction p {
+    font-size: 16px;
+  }
+
+  /* Construction grid */
+  .construction-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .construction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 10px;
+  }
 }

@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/resp.css" />
     <link rel="stylesheet" href="css/custom.css" />
   </head>
   <body>
@@ -22,11 +22,6 @@
       <div class="container header-container">
         <div class="logo">
           <img src="images/logo02.png" alt="LEBANG TRADING" />
-          <!-- <div>
-            <h1 class="humanist-font">LEBANG <span>TRADING</span></h1>
-            <div class="tagline">YOUR NUMBER ONE SOLUTION</div>
-          </div>
-          <div class="est">EST 2004</div> -->
         </div>
 
         <nav>
@@ -91,25 +86,19 @@
         </div>
       </div>
 
+      <!-- Construction Services -->
       <div class="container">
-        <!-- <div class="construction-service">
-        <div class="service-description">
-          <h3>Construction Service</h3>
-          <p>Some of our services here</p>
-        </div> -->
-
-        <!-- <div>
-          <div class="product-card" style="">
-            <div class="product-glow"></div>
-
-            <div class="product-icon">
-              <img src="" alt="" />
-            </div>
-            <h2>RENNOVATIONS & MAINTENANCE</h2>
-            <p>hre are some</p>
-            <div class="product-line"></div>
+        <div class="construction-service">
+          <div class="service-description">
+            <h3>Construction Service</h3>
+            <p>
+              civil engineering and construction services delivered with
+              professionalism, reliability, and high industry standards.
+            </p>
           </div>
-        </div> -->
+            <!-- Construction services -->
+          <div class="construction-grid"></div>
+        </div>
       </div>
 
       <!-- Call to Action -->
@@ -134,8 +123,6 @@
         <div class="footer-content">
           <div class="footer-logo">
             <img src="images/logo01.png" alt="LEBANG TRADING" />
-            <!-- <h2 class="humanist-font">LEBANG TRADING</h2> -->
-            <!-- <div class="tagline">YOUR NUMBER ONE SOLUTION</div> -->
             <p>
               Your number one solution for construction, petroleum, and cleaning
               services since 2004.
@@ -181,5 +168,67 @@
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/navigation.js"></script>
+    <script>
+      const constructServices = [
+        {
+          img: "images/renovation.png",
+          title: "Rennovations & Maintenance",
+        },
+        {
+          img: "images/civileng.png",
+          title: "Civil Construction",
+        },
+        {
+          img: "images/constbuilding.png",
+          title: "Building Construction",
+        },
+        {
+          img: "images/fencing.png",
+          title: "Fencing",
+        },
+        {
+          img: "images/landscaping.png",
+          title: "Garden & Landscaping",
+        },
+        {
+          img: "images/propertydev.png",
+          title: "Property Development",
+        },
+      ];
+
+      function createConstructionCard(construct, index) {
+        return `
+        <div class="construction-card">
+              <div class="construction-icon">
+                <img
+                  src=${construct.img}
+                  class="construction-image"
+                  loading="lazy"
+                  alt=${construct.title}
+                />
+              </div>
+              <div class="constr-desc">
+                <h2>${construct.title}</h2>
+              </div>
+              <div class="construction-line"></div>
+            </div>    
+        `;
+      }
+
+      function showConstructServices() {
+        const constructionGrid = document.querySelector(".construction-grid");
+        constructionGrid.innerHTML = "";
+
+        // adding cards to grid
+        constructServices.forEach((construct, index) => {
+          constructionGrid.innerHTML += createConstructionCard(
+            construct,
+            index
+          );
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", showConstructServices);
+    </script>
   </body>
 </html>
