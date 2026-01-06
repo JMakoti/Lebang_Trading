@@ -96,6 +96,21 @@
         </div>
       </div>
 
+      <!-- Cleaning Services -->
+      <div class="container">
+        <div class="lebang-service">
+          <div class="service-description">
+            <h3>Cleaning & Hygiene Service</h3>
+            <p>
+              cleaning & ablution service delivered with professionalism,
+              reliability, and high industry standards.
+            </p>
+          </div>
+          <!-- Cleaning services -->
+          <div class="lebang-grid"></div>
+        </div>
+      </div>
+
       <!-- Call to Action -->
       <div class="container">
         <section class="section cta-cleaning">
@@ -165,5 +180,55 @@
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/navigation.js"></script>
+    <script>
+      const lebangServices = [
+        {
+          img: "images/Services-05.png",
+          title: "Ablution Facilities",
+        },
+        {
+          img: "images/Services-04.png",
+          title: "Cleaning & Hygiene Services",
+        },
+        {
+          img: "images/Services-09.png",
+          title: "General Supply & Delivery",
+        },
+      ];
+
+      function createLebangCard(construct, index) {
+        return `
+        <div class="lebang-card">
+              <div class="lebang-icon">
+                <img
+                  src=${construct.img}
+                  class="lebang-image"
+                  loading="lazy"
+                  alt=${construct.title}
+                />
+              </div>
+              <div class="constr-desc">
+                <h2>${construct.title}</h2>
+              </div>
+              <div class="lebang-line"></div>
+            </div>    
+        `;
+      }
+
+      function showLebangServices() {
+        const lebangGrid = document.querySelector(".lebang-grid");
+        lebangGrid.innerHTML = "";
+
+        // adding cards to grid
+        lebangServices.forEach((construct, index) => {
+          lebangGrid.innerHTML += createLebangCard(
+            construct,
+            index
+          );
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", showLebangServices);
+    </script>
   </body>
 </html>

@@ -88,7 +88,7 @@
 
       <!-- Construction Services -->
       <div class="container">
-        <div class="construction-service">
+        <div class="lebang-service">
           <div class="service-description">
             <h3>Construction Service</h3>
             <p>
@@ -97,7 +97,7 @@
             </p>
           </div>
             <!-- Construction services -->
-          <div class="construction-grid"></div>
+          <div class="lebang-grid"></div>
         </div>
       </div>
 
@@ -169,7 +169,7 @@
     <script src="js/animations.js"></script>
     <script src="js/navigation.js"></script>
     <script>
-      const constructServices = [
+      const lebangServices = [
         {
           img: "images/renovation.png",
           title: "Rennovations & Maintenance",
@@ -196,13 +196,13 @@
         },
       ];
 
-      function createConstructionCard(construct, index) {
+      function createLebangCard(construct, index) {
         return `
-        <div class="construction-card">
-              <div class="construction-icon">
+        <div class="lebang-card">
+              <div class="lebang-icon">
                 <img
                   src=${construct.img}
-                  class="construction-image"
+                  class="lebang-image"
                   loading="lazy"
                   alt=${construct.title}
                 />
@@ -210,25 +210,25 @@
               <div class="constr-desc">
                 <h2>${construct.title}</h2>
               </div>
-              <div class="construction-line"></div>
+              <div class="lebang-line"></div>
             </div>    
         `;
       }
 
-      function showConstructServices() {
-        const constructionGrid = document.querySelector(".construction-grid");
-        constructionGrid.innerHTML = "";
+      function showLebangServices() {
+        const lebangGrid = document.querySelector(".lebang-grid");
+        lebangGrid.innerHTML = "";
 
         // adding cards to grid
-        constructServices.forEach((construct, index) => {
-          constructionGrid.innerHTML += createConstructionCard(
+        lebangServices.forEach((construct, index) => {
+          lebangGrid.innerHTML += createLebangCard(
             construct,
             index
           );
         });
       }
 
-      document.addEventListener("DOMContentLoaded", showConstructServices);
+      document.addEventListener("DOMContentLoaded", showLebangServices);
     </script>
   </body>
 </html>

@@ -1109,6 +1109,7 @@ nav ul li a.active::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  background: url("../images/contact-us.png") no-repeat center center/cover;
 }
 
 .contact-info h3 {
@@ -1514,14 +1515,14 @@ footer {
 }
 
 /* 
-Construction Division */
-.construction-grid {
+Services Division */
+.lebang-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
   margin: 40px 0;
 }
-.construction-card {
+.lebang-card {
   overflow: hidden;
   transition: all 0.3s ease;
   padding: 40px 30px;
@@ -1529,8 +1530,7 @@ Construction Division */
   justify-items: center;
 }
 
-.construction-card .construction-icon {
-  
+.lebang-card .lebang-icon {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 50%;
@@ -1539,12 +1539,12 @@ Construction Division */
   padding: 10px 21px;
 }
 
-.construction-card .construction-image {
+.lebang-card .lebang-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.construction-card .constr-desc {
+.lebang-card .constr-desc {
   width: 100%;
   display: inline-block;
   margin-top: 25px;
@@ -1557,11 +1557,11 @@ Construction Division */
   transition: all 0.3s ease;
   text-align: center;
 }
-.construction-card .constr-desc h2 {
+.lebang-card .constr-desc h2 {
   font-size: 1.1rem;
 }
 
-.construction-card .construction-line {
+.lebang-card .lebang-line {
   position: absolute;
   /* bottom: 0; */
   top: 0;
