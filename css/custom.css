@@ -52,8 +52,12 @@
   background-size: cover;
   background-position: center;
 }
-.page-header.hero-construction {
-  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
+.constr-page-header.hero-construction {
+  background: 
+    linear-gradient(
+      rgba(226, 204, 150, 0.4), 
+      rgba(240, 195, 117, 0.6)
+    ),
     url("https://images.unsplash.com/photo-1575281923032-f40d94ef6160?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
