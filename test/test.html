@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Our Cleaning Group</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Arial", sans-serif;
+    }
+
+    .about-section {
+      width: 100%;
+      background: #0d47a1;
+    }
+
+    .about-container {
+      display: flex;
+      min-height: 500px;
+    }
+
+    .about-image {
+      width: 50%;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-content {
+      width: 50%;
+      background: #0d47a1;
+      color: #ffffff;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .title-block {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .title-block img {
+      width: 60px;
+      height: 60px;
+      filter: brightness(0) invert(1); /* makes icon white */
+    }
+
+    .title-block h3 {
+      font-size: 28px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+    }
+
+    .title-block .light {
+      color: #ffffff;
+    }
+
+    .title-block .highlight {
+      color: #ffeb3b; /* yellow pops nicely on blue */
+      font-weight: 600;
+    }
+
+    .about-content .subtitle {
+      font-size: 22px;
+      color: #e3f2fd;
+      margin-top: 5px;
+    }
+
+    .about-content .description {
+      font-family: "Open Sans", sans-serif;
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .about-content .service-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px 30px;
+    }
+
+    .about-content .service-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    .about-content .service-list i {
+      color: #ffeb3b;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-container {
+        flex-direction: column;
+      }
+
+      .about-image,
+      .about-content {
+        width: 100%;
+      }
+
+      .about-content {
+        padding: 40px 20px;
+      }
+
+      .service-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <body>
+    <section class="about-section">
+      <div class="about-container">
+        <!-- Left Image -->
+        <div class="about-image">
+          <img
+            src="https://xtratheme.com/elementor/cleaning/wp-content/uploads/sites/25/2018/09/i1-1.jpg"
+            alt="Cleaning Service"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div class="about-content">
+          <div class="title-block">
+            <img
+              src="https://xtratheme.com/elementor/cleaning/wp-content/uploads/sites/25/2018/09/housekeeping-2.png"
+              alt="Icon"
+            />
+            <div>
+              <h3>
+                <span class="light">About Our</span>
+                <span class="highlight"> Cleaning Group</span>
+              </h3>
+              <p class="subtitle">We are expert in home cleaning</p>
+            </div>
+          </div>
+
+          <p class="description">
+            Some of our customers prefer to schedule a one-time clean based on
+            their needs. Whether they’re expecting company or just hosted a
+            party, our occasional cleaning service gets their home in tip-top
+            shape.
+          </p>
+
+          <ul class="service-list">
+            <li><i class="fa-solid fa-shield"></i> Commercial Cleaning</li>
+            <li><i class="fa-solid fa-shield"></i> Building Cleaning</li>
+            <li><i class="fa-solid fa-shield"></i> Home Cleaning</li>
+            <li><i class="fa-solid fa-shield"></i> Vehicle Cleaning</li>
+            <li><i class="fa-solid fa-shield"></i> Regular Cleaning</li>
+            <li><i class="fa-solid fa-shield"></i> Occasional Cleaning</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
