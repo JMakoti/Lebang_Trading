@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="animate.css" />
+
   </head>
   <body>
     <!-- Header & Navigation -->
@@ -104,17 +106,6 @@
               various Government Departments and Institutions with a wide range
               of Promotional, Gift items and Clothing supplies.
             </p>
-
-            <!-- <ul class="service-list">
-              <li>
-                <i class="fa-solid fa-shield"></i> Cleaning & Hygiene Service
-              </li>
-              <li><i class="fa-solid fa-shield"></i> Building Cleaning</li>
-              <li><i class="fa-solid fa-shield"></i> Home Cleaning</li>
-              <li><i class="fa-solid fa-shield"></i> Vehicle Cleaning</li>
-              <li><i class="fa-solid fa-shield"></i> Regular Cleaning</li>
-              <li><i class="fa-solid fa-shield"></i> Occasional Cleaning</li>
-            </ul> -->
           </div>
         </div>
       </section>
@@ -207,7 +198,7 @@
                 <p>Everyday essentials, always on time.</p>
               </div>
               <img
-                src="https://xtratheme.com/elementor/cleaning/wp-content/uploads/sites/25/2018/09/pr4-1.jpg"
+                src="https://5.imimg.com/data5/SELLER/Default/2022/12/YW/NH/ZZ/125623/levender-floor-cleaner-500-ml-1000x1000.png"
                 alt=""
               />
             </div>
@@ -215,19 +206,94 @@
         </div>
       </section>
 
-      <!-- Cleaning Services -->
-      <!-- <div class="container">
-        <div class="lebang-service">
-          <div class="service-description">
-            <h3>Cleaning & Hygiene Service</h3>
+      <!-- cleaning products -->
+      <section class="cleaning-products-section-title">
+        <div class="cleaning-products-container">
+          <h3 class="cleaning-products-main-title">
+            Our Premium
+            <span class="cleaning-products-highlight">Cleaning Products</span>
+          </h3>
+          <p class="cleaning-products-subtitle">
+            We can do it because we are expert in cleaning
+          </p>
+        </div>
+      </section>
+
+      <section class="cleaning-products-section">
+        <div class="cleaning-products-grid">
+          <div class="cleaning-products-card">
+            <img
+              src="https://res.cloudinary.com/drselhsl4/image/upload/v1770397948/Lebang/icons/khs6gqz0bwkxdqk9onz4.png"
+              alt="Personal Protective Equipment Supplies"
+            />
+            <h3>Personal Protective Equipment Supplies</h3>
             <p>
-              cleaning & ablution service delivered with professionalism,
-              reliability, and high industry standards.
+              High-quality PPE designed to safeguard employees, enhance
+              workplace safety, and meet industry compliance standards.
             </p>
           </div>
-          <div class="lebang-grid"></div>
+
+          <div class="cleaning-products-card">
+            <img
+              src="https://res.cloudinary.com/drselhsl4/image/upload/v1770397948/Lebang/icons/nlwwcatcyc22wjsgwuak.png"
+              alt="Cleaning Materials and Equipment Supplies"
+            />
+            <h3>Cleaning Materials & Equipment Supplies</h3>
+            <p>
+              Durable cleaning materials and equipment that deliver superior
+              hygiene, efficiency, and long-term performance.
+            </p>
+          </div>
+
+          <div class="cleaning-products-card">
+            <img
+              src="https://res.cloudinary.com/drselhsl4/image/upload/v1770397948/Lebang/icons/a4ybzaomntbfquh5tn5v.png"
+              alt="Fast Moving Consumable Goods"
+            />
+            <h3>Fast Moving Consumable Goods (FMCG)</h3>
+            <p>
+              Everyday essential products supplied reliably to support smooth
+              operations for businesses and institutions.
+            </p>
+          </div>
+
+          <div class="cleaning-products-card">
+            <img
+              src="https://res.cloudinary.com/drselhsl4/image/upload/v1770397948/Lebang/icons/rltguteikpzde7myuggi.png"
+              alt="Promotional Gifts and Clothing"
+            />
+            <h3>Promotional Gifts & Clothing</h3>
+            <p>
+              Custom-branded gifts and apparel that enhance brand visibility and
+              leave a lasting impression on your audience.
+            </p>
+          </div>
+
+          <div class="cleaning-products-card">
+            <img
+              src="https://res.cloudinary.com/drselhsl4/image/upload/v1770397948/Lebang/icons/tpuioimqxgvkjx0aehjv.png"
+              alt="ICT Supplies"
+            />
+            <h3>ICT Supplies</h3>
+            <p>
+              Reliable ICT equipment and accessories that power productivity,
+              connectivity, and digital efficiency.
+            </p>
+          </div>
+
+          <div class="cleaning-products-card">
+            <img
+              src="https://res.cloudinary.com/drselhsl4/image/upload/v1770397947/Lebang/icons/wwittnqfntuughlgv81p.png"
+              alt="Office Furniture Supplies"
+            />
+            <h3>Office Furniture Supplies</h3>
+            <p>
+              Ergonomic and functional office furniture designed to create
+              comfortable, efficient, and professional workspaces.
+            </p>
+          </div>
         </div>
-      </div> -->
+      </section>
 
       <!-- Call to Action -->
       <div class="container">
@@ -302,52 +368,5 @@
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/navigation.js"></script>
-    <script>
-      const lebangServices = [
-        {
-          img: "images/Services-05.png",
-          title: "Ablution Facilities",
-        },
-        {
-          img: "images/Services-04.png",
-          title: "Cleaning & Hygiene Services",
-        },
-        {
-          img: "images/Services-09.png",
-          title: "General Supply & Delivery",
-        },
-      ];
-
-      function createLebangCard(construct, index) {
-        return `
-        <div class="lebang-card">
-              <div class="lebang-icon">
-                <img
-                  src=${construct.img}
-                  class="lebang-image"
-                  loading="lazy"
-                  alt=${construct.title}
-                />
-              </div>
-              <div class="constr-desc">
-                <h2>${construct.title}</h2>
-              </div>
-              <div class="lebang-line"></div>
-            </div>    
-        `;
-      }
-
-      function showLebangServices() {
-        const lebangGrid = document.querySelector(".lebang-grid");
-        lebangGrid.innerHTML = "";
-
-        // adding cards to grid
-        lebangServices.forEach((construct, index) => {
-          lebangGrid.innerHTML += createLebangCard(construct, index);
-        });
-      }
-
-      document.addEventListener("DOMContentLoaded", showLebangServices);
-    </script>
   </body>
 </html>

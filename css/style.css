@@ -1653,7 +1653,7 @@ Services Division */
 }
 
 .title-block .highlight {
-  color: #ffeb3b;
+  color: var(--blood-orange);
   font-weight: 600;
 }
 
@@ -1670,25 +1670,6 @@ Services Division */
   margin-bottom: 20px;
 }
 
-.cleaning-about-content .service-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px 30px;
-}
-
-.cleaning-about-content .service-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #ffffff;
-  font-family: "Open Sans", sans-serif;
-}
-
-.cleaning-about-content .service-list i {
-  color: #ffeb3b;
-}
-
 /* Responsive */
 @media (max-width: 900px) {
   .cleaning-about-container {
@@ -1703,17 +1684,13 @@ Services Division */
   .cleaning-about-content {
     padding: 40px 20px;
   }
-
-  .service-list {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* cleaning services */
 
-.cleaning-packages{
+.cleaning-packages {
   padding: 80px 20px;
-   background:
+  background:
     linear-gradient(rgba(33, 64, 154, 0.7), rgba(33, 64, 154, 0.7)),
     url("https://xtratheme.com/elementor/cleaning/wp-content/uploads/sites/25/2018/09/p9-1-1.jpg");
   background-size: cover;
@@ -1746,7 +1723,7 @@ Services Division */
 }
 
 .cleaning-packages .section-header h2 span {
-  color: #ffeb3b;
+  color: var(--blood-orange);
   font-weight: 600;
 }
 
@@ -1783,7 +1760,6 @@ Services Division */
 .card-content {
   padding: 25px;
   text-align: center;
-  
 }
 
 .number {
@@ -1799,7 +1775,7 @@ Services Division */
 }
 
 .card h3 span {
-  color: #ec2f2b;
+  color: var(--blood-orange);
 }
 
 .card p {
@@ -1816,13 +1792,125 @@ Services Division */
 }
 
 @media (max-width: 1000px) {
-  .cards {
+  .cleaning-packages .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 600px) {
-  .cards {
+  .cleaning-packages .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* // cleaning products */
+.cleaning-products-section-title {
+  padding: 70px 20px 40px;
+  text-align: center;
+}
+
+/* Container */
+.cleaning-products-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Title */
+.cleaning-products-main-title {
+  font-size: 36px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+
+/* Highlighted text */
+.cleaning-products-highlight {
+  color: var(--blood-orange);;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.cleaning-products-subtitle {
+  font-size: 22px;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cleaning-products-main-title {
+    font-size: 28px;
+  }
+
+  .cleaning-products-subtitle {
+    font-size: 18px;
+  }
+}
+
+.cleaning-products-section {
+  padding: 80px 20px;
+}
+
+.cleaning-products-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cleaning-products-card {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transform: translateY(-8px); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.cleaning-products-card img {
+  width: 90px;
+  height: auto;
+  margin-bottom: 20px;
+  display: inline-block; 
+  will-change: transform;
+}
+
+
+.cleaning-products-card:hover img {
+    animation: cp-shake-horizontal 3s linear infinite;
+
+}
+
+
+
+.cleaning-products-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.cleaning-products-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Hover effect */
+.cleaning-products-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--blood-orange);
+
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cleaning-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .cleaning-products-grid {
     grid-template-columns: 1fr;
   }
 }
