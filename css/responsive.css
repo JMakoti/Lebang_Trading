@@ -1147,17 +1147,9 @@
 }
 
 /* ============================================
-   CLEANING & HYGIENE DIVISION
-   ============================================ */
-
-/* ============================================
    CONTACT PAGE
    ============================================ */
 @media (max-width: 992px) {
-  /* .contact-container {
-    flex-direction: column;
-  } */
-
   .info-card {
     position: relative;
     width: 100%;
