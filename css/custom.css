@@ -1,6 +1,7 @@
 /* Hero Slide Backgrounds */
 .carousel-slide.slide-1 {
-  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
     url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80");
   background-repeat: no-repeat;
   background-size: cover;
@@ -8,7 +9,8 @@
   height: 100vh;
 }
 .carousel-slide.slide-2 {
-  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
     url("https://images.unsplash.com/photo-1629241290025-6bb716261f5f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,7 +18,8 @@
   height: 100vh;
 }
 .carousel-slide.slide-3 {
-  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
     url("https://images.unsplash.com/photo-1575281923032-f40d94ef6160?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,7 +27,8 @@
   height: 100vh;
 }
 .carousel-slide.slide-4 {
-  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
     url("https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
@@ -46,7 +50,8 @@
 
 /* Pages Hero section Backgrounds */
 .page-header.hero-cleaning {
-  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
     url("https://images.unsplash.com/photo-1669101602108-fa5ba89507ee?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
@@ -55,19 +60,18 @@
   height: 65vh;
 }
 .constr-page-header.hero-construction {
-  background: 
-    linear-gradient(
-      rgba(226, 204, 150, 0.4), 
-      rgba(240, 195, 117, 0.6)
-    ),
+  background:
+    linear-gradient(rgba(196, 174, 120, 0.95), rgba(210, 165, 87, 0.95)),
     url("https://images.unsplash.com/photo-1575281923032-f40d94ef6160?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 65vh;
 }
+
 .page-header.hero-petroleum {
-  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6)),
     url("https://images.unsplash.com/photo-1629241290025-6bb716261f5f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
@@ -76,38 +80,52 @@
   height: 65vh;
 }
 
+.page-header.hero-contact {
+  background:
+    linear-gradient(rgba(196, 174, 120, 0.95), rgba(210, 165, 87, 0.95)),
+    url("../images/contactbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 65vh;
+}
+
 /* CTA Section */
 /* Home Page */
 .cta-section .cta {
-  background: linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
     url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80");
   background-size: cover;
   background-position: center;
 }
 
 .cta-petroleum .cta {
-  background: linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
-    url("/images/petroleumbg1.jpg");
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
+    url("../images/petroleumbg1.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .cta-construction .cta {
-  background: linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
-    url("/images/building.jpg");
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
+    url("../images/building.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .cta-cleaning .cta {
-  background: linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
-    url("/images/cleaning.jpg");
+  background:
+    linear-gradient(rgba(33, 64, 154, 0.9), rgba(33, 64, 154, 0.9)),
+    url("../images/cleaning.jpg");
   background-size: cover;
   background-position: center;
 }
 
 /* Service comb-bg */
 .servicecomb.servicecomb-bg {
-  background: url("/images/petrolgun.png") no-repeat center;
+  background: url("../images/petrolgun.png") no-repeat center;
   background-size: contain;
 }

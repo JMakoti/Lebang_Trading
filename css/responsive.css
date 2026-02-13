@@ -46,12 +46,17 @@
   }
 
   /* Navigation */
+  .header-container {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
   nav ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: white;
     flex-direction: column;
     padding: 20px;
@@ -154,8 +159,8 @@
   }
 
   .partner-logo {
-    height: 120px;
-    width: 160px;
+    height: 200px;
+    width: 250px;
   }
 
   /* Footer */
@@ -278,8 +283,8 @@
   }
 
   .partner-logo {
-    height: 100px;
-    width: 130px;
+    height: 180px;
+    width: 230px;
   }
 
   /* CTA */
@@ -302,16 +307,10 @@
   header .header-container {
     padding: 0 20px;
   }
-
-  /* Logo in Header */
-  .logo img {
-    max-height: 40px;
+  .header-container .logo img {
+    width: 100px;
+    height: auto;
   }
-
-  /* Mobile Menu */
-  /* nav ul {
-    top: 60px;
-  } */
 
   /* Hero Section */
   .hero {
@@ -393,8 +392,8 @@
   }
 
   .partner-logo {
-    height: 80px;
-    width: 100px;
+    height: 150px;
+    width: 200px;
   }
 
   /* CTA */
@@ -1154,6 +1153,58 @@
 /* ============================================
    CONTACT PAGE
    ============================================ */
-/* .contact-container {
-  grid-template-columns: 1fr;
-} */
+@media (max-width: 992px) {
+  /* .contact-container {
+    flex-direction: column;
+  } */
+
+  .info-card {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-card {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-container {
+    flex-direction: column;
+  }
+  .card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+  .contact-bg {
+    padding: 60px 15px;
+  }
+
+  .contact-info {
+    padding: 20px;
+  }
+
+  .form-card {
+    padding: 30px 20px;
+  }
+
+  .form-header {
+    font-size: 22px;
+  }
+
+  .contact-icon {
+    margin-bottom: 10px;
+  }
+
+  .contact-details h4 {
+    font-size: 15px;
+  }
+
+  .contact-details p {
+    font-size: 13px;
+  }
+}

@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/custom.css" />
   </head>
   <body>
     <!-- Header & Navigation -->
@@ -33,17 +34,20 @@
           <ul id="main-nav">
             <li><a href="index.html" class="nav-link">Home</a></li>
             <li>
+              <a href="petroleum.html" class="nav-link active"
+                >Petroleum Services</a
+              >
+            </li>
+            <li>
               <a href="construction.html" class="nav-link"
                 >Construction Services</a
               >
             </li>
-            <li>
-              <a href="petroleum.html" class="nav-link">Petroleum Services</a>
-            </li>
+
             <li>
               <a href="cleaning.html" class="nav-link">Cleaning & Hygiene</a>
             </li>
-            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
           </ul>
 
           <button class="mobile-menu-btn" id="mobile-menu-toggle">
@@ -55,7 +59,7 @@
 
     <!-- Contact Content -->
     <main class="page-content">
-      <section class="page-header">
+      <section class="page-header hero-contact">
         <h2>Contact Us</h2>
         <p>
           Get in touch with us for all your construction, petroleum, and
@@ -63,118 +67,75 @@
         </p>
       </section>
 
-      <div class="container">
+      <section class="contact-bg">
         <div class="contact-container">
-          <div class="contact-info">
-            <h3>Contact Details</h3>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Telephone</h4>
-                <p>+27 82 220 1638</p>
-                <p>Fascimille: 086 471 9832</p>
-              </div>
+          <div class="contact-card info-card">
+            <div class="card-image">
+              <img src="./images/contacthero.jpg" alt="Office Image" />
             </div>
 
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Telephone</h4>
+                  <p>+27 82 220 1638</p>
+                  <p>Facsimile: 086 471 9832</p>
+                </div>
               </div>
-              <div class="contact-details">
-                <h4>Email Address</h4>
-                <p>info@lebangtrading.co.za</p>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Email Address</h4>
+                  <p>info@lebangtrading.co.za</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-icon">
+                  <i class="fas fa-building"></i>
+                </div>
+                <div class="contact-details">
+                  <h4>Company Details</h4>
+                  <p>LEBANG TRADING CC</p>
+                </div>
               </div>
             </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-building"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Company Details</h4>
-                <p>LEBANG TRADING CC</p>
-                <p>CSD Supplier Number: MAAA0815977</p>
-                <p>Company Registration: 2004/067926/23</p>
-                <p>VAT Number: 4500292653</p>
-                <p>Tax Reference: 9477441159</p>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="contact-details">
-                <h4>Social Involvement</h4>
-                <p>
-                  We are involved in capacitating, advising and mentoring
-                  emerging entrepreneurs from different fields to achieve their
-                  goals according to their strategic plan.
-                </p>
-              </div>
-            </div>
-
-            <!-- <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Business Hours</h4>
-                            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                            <p>Saturday: 9:00 AM - 1:00 PM</p>
-                            <p>Sunday: Closed</p>
-                        </div>
-                    </div> -->
           </div>
 
-          <div class="map-section">
-            <h3 style="color: var(--primary-blue); margin-bottom: 20px">
-              Our Location
+          <div class="contact-form form-card" style="margin-top: 40px">
+            <h3 class="form-header">
+              Get in touch with us
             </h3>
-            <div class="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.1291594017744!2d28.04423281502865!3d-26.194270983442106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1b6c2d85e3%3A0x6b6d6b5e5b5e5b5e!2sJohannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sza!4v1647851234567!5m2!1sen!2sza"
-                width="100%"
-                height="400"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
-            </div>
-
-            <div class="contact-form" style="margin-top: 40px">
-              <h3 style="color: var(--primary-blue); margin-bottom: 20px">
-                Send Us a Message
-              </h3>
-              <form id="contactForm">
-                <div class="form-group">
-                  <input type="text" placeholder="Your Name" required />
-                </div>
-                <div class="form-group">
-                  <input type="email" placeholder="Your Email" required />
-                </div>
-                <div class="form-group">
-                  <input type="text" placeholder="Subject" required />
-                </div>
-                <div class="form-group">
-                  <textarea
-                    placeholder="Your Message"
-                    rows="5"
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-              </form>
-            </div>
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Your Email" required />
+              </div>
+              <div class="form-group">
+                <input type="text" placeholder="Subject" required />
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
           </div>
         </div>
-      </div>
+      </section>
     </main>
 
-    <!-- Footer -->
     <!-- Footer -->
     <footer>
       <div class="container">

@@ -1,8 +1,8 @@
 /* Reset and base styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :root {
@@ -61,6 +61,8 @@ header {
   box-shadow: var(--shadow);
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 1000;
   transition: var(--transition);
@@ -77,6 +79,10 @@ header.scrolled {
   align-items: center;
   padding: 10px 0;
   transition: var(--transition);
+}
+.header-container .logo img {
+  width: 100px;
+  height: auto;
 }
 
 nav ul {
@@ -126,17 +132,17 @@ nav ul li a.active::after {
 }
 
 /* Page content */
-
 .page-content {
   padding-top: 100px;
   min-height: calc(100vh - 100px);
 }
 
 .page-header {
-  background: linear-gradient(rgba(33, 64, 154, 0.7), rgba(33, 64, 154, 0.7));
-  background-size: cover;
-  background-position: center;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
   padding: 100px 0;
   text-align: center;
   margin-bottom: 60px;
@@ -1026,8 +1032,8 @@ nav ul li a.active::after {
 }
 
 .partner-logo {
-  height: 150px;
-  width: 200px;
+  height: 250px;
+  width: 300px;
   opacity: 0;
   transform: translateY(20px);
   transition:
@@ -1152,20 +1158,53 @@ nav ul li a.active::after {
 }
 
 /* Contact page */
+.contact-bg {
+  background-color: #fff;
+  padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+}
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  background: url("../images/contact-us.png") no-repeat center center/cover;
+  position: relative;
+  width: 1100px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
 }
 
-.contact-info h3 {
-  color: var(--primary-blue);
-  margin-bottom: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+.contact-card {
+  width: 400px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  gap: 0;
 }
 
+/* Image section */
+.card-image img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
+.info-card {
+  position: absolute;
+  left: 0;
+  width: 40%;
+  color: #ffffff;
+  z-index: 2;
+}
+/* Contact info container */
+.contact-info {
+  background-color: var(--blood-orange);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Each item */
 .contact-item {
   display: flex;
   align-items: flex-start;
@@ -1182,8 +1221,9 @@ nav ul li a.active::after {
   transform: translateX(0);
 }
 
+/* Icon styling */
 .contact-icon {
-  background-color: var(--primary-blue);
+  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6));
   color: white;
   width: 50px;
   height: 50px;
@@ -1195,40 +1235,32 @@ nav ul li a.active::after {
   flex-shrink: 0;
 }
 
+/* Text */
 .contact-details h4 {
-  color: var(--primary-blue);
-  margin-bottom: 5px;
-  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  font-size: 16px;
   font-weight: 600;
 }
 
 .contact-details p {
-  font-family: "Open Sans", sans-serif;
-}
-
-.map-container {
-  height: 400px;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  opacity: 0;
-  transform: translateX(20px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease;
-}
-
-.map-container.animate {
-  opacity: 1;
-  transform: translateX(0);
+  margin: 4px 0 0;
+  font-size: 14px;
 }
 
 /* Contact form */
-.contact-form {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: var(--shadow);
+.form-card {
+  margin-left: auto;
+  width: 65%;
+  background: linear-gradient(rgba(33, 64, 154, 0.6), rgba(33, 64, 154, 0.6));
+  z-index: 1;
+  padding: 50px 40px 50px 80px;
+}
+
+.form-header {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
 }
 
 .form-group {
@@ -2567,7 +2599,6 @@ Services Division */
   .petrol-div-about-image-col::before {
     right: -25%;
   }
-  
 }
 
 @media (max-width: 767px) {
