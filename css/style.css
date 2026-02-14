@@ -1717,7 +1717,7 @@ Services Division */
   padding: 80px 20px;
   background:
     linear-gradient(rgba(33, 64, 154, 0.7), rgba(33, 64, 154, 0.7)),
-    url("https://res.cloudinary.com/drselhsl4/image/upload/v1770410060/Lebang/y1ttoru7pkixbbiszpop.jpg");
+    url("../images/cleaning-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2451,6 +2451,7 @@ Services Division */
 .petrol-div-about-content-col {
   width: 100%;
   text-align: center;
+  padding-top: 60px;
 }
 
 .petrol-div-about-badge {
@@ -2562,6 +2563,9 @@ Services Division */
 }
 
 @media (max-width: 767px) {
+  .petrol-div-about-content-col {
+    padding-top: 0px;
+  }
   .petrol-div-about-section {
     flex-direction: row;
     display: block;
