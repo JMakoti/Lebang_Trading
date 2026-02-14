@@ -55,6 +55,40 @@ h6 {
   padding: 0 20px;
 }
 
+/* ===== PRELOADER BACKGROUND ===== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #c4ae78, #d2a557);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+/* ===== LOGO ANIMATION ===== */
+.logo-wrapper {
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  animation: logoAnim 2s ease-in-out infinite alternate;
+}
+
+/* Floating + Fade Animation */
+@keyframes logoAnim {
+  0% {
+    transform: scale(0.9) translateY(0px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.05) translateY(-10px);
+    opacity: 1;
+  }
+}
+
 /* Header and Navigation */
 header {
   background-color: white;
